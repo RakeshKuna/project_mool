@@ -1,0 +1,47 @@
+{
+  "public": {
+    "googleApiKey": "AIzaSyAd7VZpzSCdkOrkgdhCbMm3JYqwGap0Pa4",
+    "isLeadSquaredTrackingEnabled":true,
+    "dateFormat":"D MMM YYYY HH:mm:ss",
+    "dateOnlyFormat":"D MMM YYYY",
+    "createNewUser":{
+      "code"    : 209,
+      "message" : "New User Created"
+    },
+    "phpWebSiteLink": "https://uat.moolya.global/register",
+    "instance":"UAT"
+  },
+  "private": {
+    "subChapterName":"moolya",
+    "HierarchyCount": 10,
+    "emailConfig":{
+      "username": "raksanconsulting",
+      "key": "IMRne62ShKE6Q8zU0NJBsQ"
+    },
+    "smsConfig":{
+      "isWhiteListEnabled":true
+    },
+    "aws":{
+      "s3Config":{
+        "accessKeyId":"AKIAIOLVK4M2SMABND3Q",
+        "secretAccessKey":"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",
+        "region":"ap-south-1",
+        "maxAsyncS3":20,
+        "s3RetryCount":3,
+        "s3RetryDelay":1000,
+        "multipartUploadThreshold": 20971520,
+        "multipartUploadSize": 15728640,
+        "urlExpirationTime":4000,
+        "bucketName":"moolya-users",
+        "adminBucketKey":"moolya-admin-users"
+      }
+    },
+    "graphql_proxy_url":"http://localhost:8090/graphql",
+    "smtpMailUrl":"smtp://noreply:RakSan123$@smtp.moolya.in:25",
+    "googleApiKey": "AIzaSyAd7VZpzSCdkOrkgdhCbMm3JYqwGap0Pa4",
+    "fromEmailAddr":"noreply@moolya.in",
+    "bugReportEmailAddr":"noreply@moolya.in",
+    "isEmailDomainCheckEnabled":true,
+    "isAuditEnabled":true
+  }
+}

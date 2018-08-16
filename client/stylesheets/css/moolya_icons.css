@@ -1,0 +1,458 @@
+/*@font-face {
+  font-family: 'moolya';
+  src:  url('fonts/moolya.eot?d5hx3y');
+  src:  url('fonts/moolya.eot?d5hx3y#iefix') format('embedded-opentype'),
+    url('fonts/moolya.ttf?d5hx3y') format('truetype'),
+    url('fonts/moolya.woff?d5hx3y') format('woff'),
+    url('fonts/moolya.svg?d5hx3y#moolya') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}*/
+
+[class^="ml-"], [class*=" ml-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'moolya' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+.flaticon-ml-pc-search:before { content: "\f100"; }
+.flaticon-ml-active-user:before { content: "\f101"; }
+.flaticon-ml-file-1:before { content: "\f102"; }
+.flaticon-ml-interface-2:before { content: "\f103"; }
+.flaticon-ml-interface-1:before { content: "\f104"; }
+.flaticon-ml-note-2:before { content: "\f105"; }
+.flaticon-ml-file:before { content: "\f106"; }
+.flaticon-ml-note-1:before { content: "\f107"; }
+.flaticon-ml-interface:before { content: "\f108"; }
+.flaticon-ml-arrows:before { content: "\f109"; }
+.flaticon-ml-agenda:before { content: "\f10a"; }
+.flaticon-ml-note:before { content: "\f10b"; }
+.flaticon-ml-books:before { content: "\f10c"; }
+.flaticon-ml-circle:before { content: "\f10d"; }
+.flaticon-ml-shapes:before { content: "\f10e"; }
+.flaticon-ml-share-arrow:before { content: "\f10f"; }
+.flaticon-ml-networking:before { content: "\f110"; }
+.flaticon-ml-assign-user:before { content: "\f111"; }
+.flaticon-ml-unassign-user:before { content: "\f112"; }
+.flaticon-ml-briefcase:before { content: "\f113"; }
+.flaticon-ml-favorite:before { content: "\f114"; }
+.flaticon-ml-handshake-1:before { content: "\f115"; }
+.flaticon-ml-visibility:before { content: "\f116"; }
+.flaticon-ml-security:before { content: "\f117"; }
+.flaticon-ml-building:before { content: "\f118"; }
+.flaticon-ml-cloud-computing-1:before { content: "\f119"; }
+.flaticon-ml-chat:before { content: "\f11a"; }
+.flaticon-ml-favorites:before { content: "\f11b"; }
+.flaticon-ml-cloud-computing:before { content: "\f11c"; }
+.flaticon-ml-support:before { content: "\f11d"; }
+.flaticon-ml-handshake:before { content: "\f11e"; }
+.flaticon-ml-inactive-user:before { content: "\f11f"; }
+.flaticon-ml-share-files:before { content: "\f120";}
+
+
+.ml-about:before {
+  content: "\e901";
+}
+.ml-accounts:before {
+  content: "\e902";
+}
+.ml-active:before {
+  content: "\e903";
+}
+.ml-active-User:before {
+  content: "\e904";
+}
+.ml-additional-Information:before {
+  content: "\e905";
+}
+.ml-address:before {
+  content: "\e906";
+}
+.ml-address-book:before {
+  content: "\e907";
+}
+.ml-alert:before {
+  content: "\e908";
+}
+.ml-all:before {
+  content: "\e909";
+}
+.ml-annotate:before {
+  content: "\e90a";
+}
+.ml-approve-User:before {
+  content: "\e90b";
+}
+.ml-arrow-down:before {
+  content: "\e90c";
+}
+.ml-arrow-left:before {
+  content: "\e90d";
+}
+.ml-arrow-right:before {
+  content: "\e90e";
+}
+.ml-arrow-up:before {
+  content: "\e90f";
+}
+.ml-assign:before {
+  content: "\e910";
+}
+.ml-audience:before {
+  content: "\e911";
+}
+.ml-audio:before {
+  content: "\e912";
+}
+.ml-awards:before {
+  content: "\e913";
+}
+.ml-backend-User:before {
+  content: "\e914";
+}
+.ml-basic-Information:before {
+  content: "\e915";
+}
+.ml-be-spoke:before {
+  content: "\e916";
+}
+.ml-browser:before {
+  content: "\e917";
+}
+.ml-calendar:before {
+  content: "\e918";
+}
+.ml-calls:before {
+  content: "\e919";
+}
+.ml-certificate:before {
+  content: "\e91a";
+}
+.ml-chapter:before {
+  content: "\e91b";
+}
+.ml-chart:before {
+  content: "\e91c";
+}
+.ml-chat:before {
+  content: "\e91d";
+}
+.ml-clients:before {
+  content: "\e91e";
+}
+.ml-cluster:before {
+  content: "\e91f";
+}
+.ml-community:before {
+  content: "\e920";
+}
+.ml-company:before {
+  content: "\e921";
+}
+.ml-compare:before {
+  content: "\e922";
+}
+.ml-connect:before {
+  content: "\e923";
+}
+.ml-consulting:before {
+  content: "\e924";
+}
+.ml-contact-details:before {
+  content: "\e97b";
+}
+.ml-create-password:before {
+  content: "\e925";
+}
+.ml-cross:before {
+  content: "\e926";
+}
+.ml-currency:before {
+  content: "\e927";
+}
+.ml-customer-care:before {
+  content: "\e928";
+}
+.ml-customer-support:before {
+  content: "\e929";
+}
+.ml-dashboard:before {
+  content: "\e92a";
+}
+.ml-data:before {
+  content: "\e92b";
+}
+.ml-delete:before {
+  content: "\e92c";
+}
+.ml-document:before {
+  content: "\e92d";
+}
+.ml-download:before {
+  content: "\e92e";
+}
+.ml-edit:before {
+  content: "\e92f";
+}
+.ml-email:before {
+  content: "\e930";
+}
+.ml-engagement-method:before {
+  content: "\e931";
+}
+.ml-error:before {
+  content: "\e932";
+}
+.ml-events:before {
+  content: "\e933";
+}
+.ml-export:before {
+  content: "\e934";
+}
+.ml-favourite:before {
+  content: "\e935";
+}
+.ml-filter:before {
+  content: "\e936";
+}
+.ml-funder:before {
+  content: "\e937";
+}
+.ml-funding:before {
+  content: "\e938";
+}
+.ml-go-live:before {
+  content: "\e939";
+}
+.ml-hirerachy:before {
+  content: "\e93a";
+}
+.ml-history:before {
+  content: "\e900";
+}
+.ml-home:before {
+  content: "\e93b";
+}
+.ml-idea:before {
+  content: "\e93c";
+}
+.ml-ideator:before {
+  content: "\e93d";
+}
+.ml-import:before {
+  content: "\e93e";
+}
+.ml-inactive-user:before {
+  content: "\e93f";
+}
+.ml-info:before {
+  content: "\e940";
+}
+.ml-information:before {
+  content: "\e941";
+}
+.ml-inquiry:before {
+  content: "\e942";
+}
+.ml-institutions:before {
+  content: "\e943";
+}
+.ml-investment:before {
+  content: "\e944";
+}
+.ml-kyc-document:before {
+  content: "\e945";
+}
+.ml-language:before {
+  content: "\e946";
+}
+.ml-legal:before {
+  content: "\e947";
+}
+.ml-library:before {
+  content: "\e948";
+}
+.ml-login-as:before {
+  content: "\e949";
+}
+.ml-logout:before {
+  content: "\e94a";
+}
+.ml-looking-for:before {
+  content: "\e94b";
+}
+.ml-make-public:before {
+  content: "\e94c";
+}
+.ml-management-promoters:before {
+  content: "\e94d";
+}
+.ml-membership:before {
+  content: "\e94e";
+}
+.ml-messaging:before {
+  content: "\e94f";
+}
+.ml-minus:before {
+  content: "\e950";
+}
+.ml-moolya-symbol:before {
+  content: "\e951";
+}
+.ml-my-profile:before {
+  content: "\e952";
+}
+.ml-new:before {
+  content: "\e953";
+}
+.ml-news:before {
+  content: "\e954";
+}
+.ml-numeric:before {
+  content: "\e955";
+}
+.ml-panel-member:before {
+  content: "\e956";
+}
+.ml-payments:before {
+  content: "\e957";
+}
+.ml-photo:before {
+  content: "\e958";
+}
+.ml-plus:before {
+  content: "\e959";
+}
+.ml-portfolio:before {
+  content: "\e95a";
+}
+.ml-principal:before {
+  content: "\e95b";
+}
+.ml-problem:before {
+  content: "\e95c";
+}
+.ml-provider:before {
+  content: "\e95d";
+}
+.ml-reviews:before {
+  content: "\e95e";
+}
+.ml-save:before {
+  content: "\e95f";
+}
+.ml-scrollbar-mobile:before {
+  content: "\e960";
+}
+.ml-search:before {
+  content: "\e961";
+}
+.ml-select-all:before {
+  content: "\e962";
+}
+.ml-services:before {
+  content: "\e963";
+}
+.ml-settings:before {
+  content: "\e964";
+}
+.ml-share:before {
+  content: "\e965";
+}
+.ml-social-Links:before {
+  content: "\e966";
+}
+.ml-sort:before {
+  content: "\e967";
+}
+.ml-startup:before {
+  content: "\e968";
+}
+.ml-strategy-plans:before {
+  content: "\e969";
+}
+.ml-subscribe:before {
+  content: "\e96a";
+}
+.ml-success:before {
+  content: "\e96b";
+}
+.ml-teamwork:before {
+  content: "\e96c";
+}
+.ml-template:before {
+  content: "\e96d";
+}
+.ml-theme:before {
+  content: "\e96e";
+}
+.ml-time-zone:before {
+  content: "\e96f";
+}
+.ml-timeline:before {
+  content: "\e970";
+}
+.ml-trademark:before {
+  content: "\e971";
+}
+.ml-transaction:before {
+  content: "\e972";
+}
+.ml-upload:before {
+  content: "\e973";
+}
+.ml-users:before {
+  content: "\e974";
+}
+.ml-valuation:before {
+  content: "\e975";
+}
+.ml-video:before {
+  content: "\e976";
+}
+.ml-video-calls:before {
+  content: "\e977";
+}
+.ml-wishlist:before {
+  content: "\e978";
+}
+.ml-work:before {
+  content: "\e979";
+}
+.ml-workflow:before {
+  content: "\e97a";
+}
+

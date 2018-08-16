@@ -1,0 +1,10 @@
+{
+  "process": {
+    "STATUS_CHANGED": "${user} ${status} the ${resource_name} task",
+    "DOCUMENT_UPLOAD": "${user} uploaded ${no_of_document} documents related to ${resource_name} task",
+    "DOCUMENT_DOWNLOAD": "${user} downloaded ${no_of_document} documents related to ${resource_name} task",
+    "DOCUMENT_VIEW": "${user} viewed the documents",
+    "NEW_TASK": "${user} created new ${taskName} for team",
+    "NEW_APPOINTMENT": "${user} created new appointment for team"
+  }
+}

@@ -1,0 +1,46 @@
+mixin portFolioSlides(managementInfo)
+  .ms_swiper
+    .swiper-container
+      .swiper-wrapper
+        each slide , i in managementInfo
+          .swiper-slide
+            if(slide.logo && slide.logo.length >0 )
+              if(slide.makePrivate && slide.makePrivate === true)
+                img(src=slide.logo)
+              else
+                img(src='/images/no-image.png')
+            else
+              img(src='/images/no-image.png')
+            .profile_info
+              h5 #{slide.makePrivate?'Private':slide.name ? slide.name:''}
+              h6 #{slide.designation?slide.makePrivate?'Private':slide.designation:''}
+              p
+                | #{slide.description?slide.makePrivate?'Private':slide.description:''}
+            span.expand_info
+      // Add Arrows
+    .swiper-button-next
+    .swiper-button-prev
+
+  script(type='text/javascript', src='/js/swiper.min.js')
+  script.
+    var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      slidesPerView: 4,
+      paginationClickable: true,
+      spaceBetween: 10,
+      keyboardControl: true,
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      //loop: true
+    });
+    $('.expand_info').click(function () {
+      $(this).parent().find('.profile_info').toggleClass('open');
+      $(this).toggleClass('collapse');
+    });
+  script(src="/js/swiper.min.js")
+
+
+
+// Swiper Ends
+
+

@@ -1,0 +1,58 @@
+
+@font-face {
+  font-family: 'DINPro-Regular';
+  src: url('/fonts/DINPro-Regular.eot?#iefix') format('embedded-opentype'),  url('/fonts/DINPro-Regular.otf')  format('opentype'),
+	     url('/fonts/DINPro-Regular.woff') format('woff'), url('/fonts/DINPro-Regular.ttf')  format('truetype'), url('/fonts/DINPro-Regular.svg#DINPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DINPro-Bold';
+  src: url('fonts/DINPro-Bold.eot?#iefix') format('embedded-opentype'),  url('fonts/DINPro-Bold.otf')  format('opentype'),
+	     url('fonts/DINPro-Bold.woff') format('woff'), url('fonts/DINPro-Bold.ttf')  format('truetype'), url('fonts/DINPro-Bold.svg#DINPro-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DINPro-Medium';
+  src: url('fonts/DINPro-Medium.eot?#iefix') format('embedded-opentype'),  url('fonts/DINPro-Medium.otf')  format('opentype'),
+	     url('fonts/DINPro-Medium.woff') format('woff'), url('fonts/DINPro-Medium.ttf')  format('truetype'), url('fonts/DINPro-Medium.svg#DINPro-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'moolya';
+  src:  url('fonts/moolya.eot?p94gjh');
+  src:  url('fonts/moolya.eot?p94gjh#iefix') format('embedded-opentype'),
+    url('fonts/moolya.ttf?p94gjh') format('truetype'),
+    url('fonts/moolya.woff?p94gjh') format('woff'),
+    url('fonts/moolya.svg?p94gjh#moolya') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("fonts/Flaticon.eot");
+  src: url("fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("fonts/Flaticon.woff") format("woff"),
+       url("fonts/Flaticon.ttf") format("truetype"),
+       url("fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'mymoolya-icons';
+  src:  url('fonts/mymoolya-icons.eot?ixfm1q');
+  src:  url('fonts/mymoolya-icons.eot?ixfm1q#iefix') format('embedded-opentype'),
+  url('fonts/mymoolya-icons.ttf?ixfm1q') format('truetype'),
+  url('fonts/mymoolya-icons.woff?ixfm1q') format('woff'),
+  url('fonts/mymoolya-icons.svg?ixfm1q#mymoolya-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

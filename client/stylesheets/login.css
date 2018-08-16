@@ -1,0 +1,79 @@
+.brclear{clear: both;}
+.login_bg video{    position: fixed;top: 50%;left: 50%;min-width: 100%;min-height: 100%;width: auto;height: auto;z-index: -100;transform: translateX(-50%) translateY(-50%);background-size: cover;transition: 1s opacity;}
+.login_bg img.login_logo{position: absolute;z-index: 1;top: -2px;left: calc(50% - 265px);}
+.login_bg img.logout_logo{position: absolute;z-index: 1;top: 10px;left: calc(50% - 142px);}
+.login_block{height: 214px;width: 356px;background: #FFC20E;z-index: 2;position: absolute;top: 250px;left: 50%;transform: translateX(-50%);}
+.login_block:after{position:absolute;right:-50px;content:" ";width: 0px;height: 0px;border-style: solid;border-width: 107px 0 107px 50px;border-color: transparent transparent transparent #FFC20E;top: 0px;}
+.login_block:before{position:absolute;left:-50px;content:" ";width: 0px;height: 0px;border-style: solid;border-width: 107px 50px 107px 0px;border-color: transparent #FFC20E transparent transparent;top: 0px;}
+
+/*.login_block_in{transform: scale(.95, .95);background: #273545;z-index: 3;top: -3px;left: -7px;height: 220px;width: 371px;}
+.login_block_in:after{border-color: transparent transparent transparent #273545;border-width: 110px 0 110px 50px;}
+.login_block_in:before{border-color: transparent #273545 transparent transparent;border-width: 110px 50px 110px 0px;}*/
+
+.login_block_in{    height: 208px;width: 350px;background: #273545;z-index: 2;position: absolute;top: 3px;left: 50%;
+  transform: translateX(-50%);}
+.login_block_in:after{position:absolute;right:-50px;content:" ";width: 0px;height: 0px;border-style: solid;border-width: 104px 0 104px 50px;border-color: transparent transparent transparent #273545;top: 0px;}
+.login_block_in:before{position:absolute;left:-50px;content:" ";width: 0px;height: 0px;border-style: solid;border-width: 104px 50px 104px 0px;border-color: transparent #273545 transparent transparent;top: 0px;}
+
+
+.login_top{    height: 80px;width: 174px;background: #FFC20E;z-index: 1;position: absolute;top: 213px;left: 50%;
+  transform: translateX(-50%);color: #fff;text-shadow: none;font-size: 20px;}
+.login_top:after{    position: absolute;right: -30px;content: " ";width: 0px;height: 0px;border-style: solid;border-width: 40px 0 40px 30px;border-color: transparent transparent transparent #FFC20E;top: 0px;}
+.login_top:before{    position: absolute;left: -30px;content: " ";width: 0px;height: 0px;border-style: solid;border-width: 40px 30px 40px 0px;border-color: transparent #FFC20E transparent transparent;top: 0px;}
+
+.login_top_in{height: 74px;width: 170px;background: #273545;z-index: 2;position: absolute;top: 3px;left: 50%;transform: translateX(-50%);text-align: center;}
+.login_top_in:after{position: absolute;right: -27px;content: " ";width: 0px;height: 0px;border-style: solid;border-width: 37px 0 37px 27px;border-color: transparent transparent transparent #273545;top: 0px;}
+.login_top_in:before{position: absolute;left: -27px;content: " ";width: 0px;height: 0px;border-style: solid;border-width: 37px 27px 37px 0px;border-color: transparent #273545 transparent transparent;top: 0px;}
+
+.login_block_in .form-control{border-bottom: 2px solid #fff;margin-bottom: 20px;height: 36px;color: #fff;padding-top: 0px}
+.login_block_in form{padding-top: 27px;overflow: hidden;}
+
+.ml_submit_btn{border-radius:0 !important; height: 42px;background: #ef4647;position: relative;border: 0px;padding: 0px 20px;float: right;margin-right: 15px;color: #fff;}
+.ml_submit_btn:after{position:absolute;right:-14px;content:" ";width: 0px;height: 0px;border-style: solid;border-width: 21px 0 21px 14px;border-color: transparent transparent transparent #ef4647;top: 0px;}
+.ml_submit_btn:before{position:absolute;left:-14px;content:" ";width: 0px;height: 0px;border-style: solid;border-width: 21px 14px 21px 0px;border-color: transparent #ef4647 transparent transparent;top: 0px;}
+
+.checkbox_wrap{float: left;}
+.checkbox_wrap span{position: relative;top: -2px;left: 5px;color: #fff;text-shadow: none;color: #B9C5CC;font-size: 12px;}
+
+.login_block_in p{color: #B9C5CC;font-size: 12px;text-align: left;text-shadow: none; }
+.login_block_in a{    color: #B9C5CC; padding:0px 5px;        }
+.login_block_in a:hover{color: #fff;text-decoration: none;}
+
+.login_block_in input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0px 1000px #273545 inset !important;
+  -webkit-text-fill-color: #fff !important;
+  background-color: rgba(0,0,0,1) !important;
+}
+.login_bg{text-align: center;height: 678px;overflow: hidden;position: relative;}
+.video_bg{display: block;background-image: url("../images/moolya-login-bg.jpg");background-size: cover;background-position: bottom center;display: block;position: fixed;top: 0px;left: 0px;width: 100%;height: 100%;background-repeat: no-repeat;}
+.login_bg video{display: none;}
+.app_msg{display:none; position: absolute;text-align: center;width: 828px;font-size: 11px;left: calc(50% - 414px);background-color: rgba(255,255,255,0.5);bottom: -33px;height: 60px;line-height: 27px;}
+.app_msg:before{position: absolute; left: -29px; content: " "; width: 0px; height: 0px; border-style: solid; border-width: 30px 29px 30px 0px; border-color: transparent rgba(255,255,255,0.5) transparent transparent; top: 0px;}
+.app_msg:after{position: absolute; right: -29px; content: " "; width: 0px; height: 0px; border-style: solid; border-width: 30px 0 30px 29px; border-color: transparent transparent transparent rgba(255,255,255,0.5); top: 0px;}
+.app_msg p{margin: 0px;padding: 0px 10px;}
+.m_red{color:#ef4647;}
+.m_blue{color:#005593;}
+.m_yel{color:#ffc20e;}
+@media only screen and ( max-width: 768px ){
+  .login_bg video{display: none;}
+  .video_bg{background-image: url("../images/moolya-login-bg.jpg");background-size: cover;background-position: center center;display: block;position: fixed;top: 0px;left: 0px;width: 100%;height: 100%;background-repeat: no-repeat;}
+}
+@media only screen and ( max-width: 1024px ){
+  .login_bg video{display: none;}
+  .video_bg{background-image: url("../images/moolya-login-bg.jpg");background-size: cover;background-position: center center;display: block;position: fixed;top: 0px;left: 0px;width: 100%;height: 100%;background-repeat: no-repeat;}
+}
+
+video::-internal-media-controls-download-button {
+  display:none;
+}
+
+video::-webkit-media-controls-enclosure {
+  overflow:hidden;
+}
+
+video::-webkit-media-controls-panel {
+  width: calc(100% + 30px);
+}
+
+
+@media only screen and (width: 1024px ){.logout .logout_message{width:60%;}}

@@ -1,0 +1,417 @@
+doctype html
+html(prefix='og: http://ogp.me/ns#')
+  mixin space()
+    | !{' '}
+  head
+    -var title = displayName +" is " +  communityType+ " on moolya from " + chapterName + " , "+ clusterName
+    -var desc = aboutDiscription?aboutDiscription.substr(0,160):''
+
+    meta(charset='utf-8')
+    title #{title}
+    meta(name='description', content=desc)
+    meta(name='keywords', content=keywords)
+    link(rel='canonical', href='https://moolya.global')
+    link(rel='publisher', href='moolya')
+
+    meta(property='fb:app_id', content='328947447490953')
+    meta(property='og:locale', content='en_US')
+    meta(property='og:type', content='website')
+    meta(property='og:title', content=title ? title.substr(0, 60) : '')
+    meta(property='og:description', content=desc)
+    meta(property='og:url', content=currentUrl)
+    meta(property='og:image', content=profilePic)
+    meta(property='og:image:width', content='250')
+    meta(property='og:image:height', content='250')
+    meta(property='og:image:secure_url', content=profilePic)
+    meta(property='og:image:alt', content=displayName)
+    meta(property='og:site_name', content='moolya')
+
+
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:description', content=desc ? desc : 'No Description')
+    meta(name='twitter:title', content=title ? title.substr(0, 60) : '')
+    meta(name='twitter:site', content=twitterHandle)
+    meta(name='twitter:creator', content='moolya')
+    meta(name='twitter:image', content=profilePic)
+
+    link(href='/css/ms_styles.css', type='text/css', media='all', rel='stylesheet')
+    link(href='/css/font-awesome.css', type='text/css', media='all', rel='stylesheet')
+    link(href='/css/swiper.min.css', type='text/css', media='all', rel='stylesheet')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  body
+    include analytics
+    script.
+      (function ($) {
+        $(window).on("load", function () {
+          $(".content").mCustomScrollbar();
+        });
+      })(jQuery);
+
+    script.
+      $(document).ready(function () {
+        $(".ms_socialNetworks ul li").click(function () {
+          $(".share-url .ms_btn_re").text("Copy");
+        })
+      });
+      function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+        $(".share-url .ms_btn_re").text("Copied")
+      }
+
+
+
+    script.
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: '328947447490953',
+          autoLogAppEvents: true,
+          xfbml: true,
+          version: 'v2.10'
+        });
+        FB.AppEvents.logPageView();
+      };
+      (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    script(type = 'in/Login').
+    .mask(style='display: none;')
+    .ms_main_wrap
+      .ms_header
+        .header_left
+          a(href='https://www.moolya.global/')
+            img(src='/images/logo.png')
+          .shape1
+        .header_right
+          img(src='/images/ecosystem.png')
+          img(src='/images/patent.png')
+          .ms_social_wrap
+            span.web_url
+              a(href='http://www.moolya.global')
+                | www.
+                span.m_red m
+                span.m_yel oo
+                span.m_red lya
+                | .global
+            .share-social(style='color: #ef4647;')
+              i.fa.fa-share-alt(aria-hidden='true')
+            .ms_socialNetworks
+              label share your public profile
+              ul
+                li
+                  a(href='#' rel='nofollow' onclick='facebookShare("'+defaultTextShare+' Thank You, '+ displayName+'","'+ currentUrl + '",this)')
+                    i.fa.fa-facebook(aria-hidden='true')
+                li
+                  a.customer.share(href='http://www.twitter.com/intent/tweet?text='+defaultTextShare+' Thank You, '+ displayName +'&url=' + currentUrl + '', title='Twitter share' rel='nofollow')
+                    i.fa.fa-twitter(aria-hidden='true')
+                li
+                  a.customer.share(href='https://www.linkedin.com/shareArticle?mini=true&url=' + currentUrl + '' rel='nofollow')
+                    i.fa.fa-linkedin(aria-hidden='true')
+                li
+                  a.customer.share(href='https://plus.google.com/share?url=' + currentUrl + '' rel='nofollow')
+                    i.fa.fa-google-plus(aria-hidden='true' alt="Share on Google+")
+                .share-url
+                  a.ms_btn_re(href='#', onclick="copyToClipboard('#p1')") Copy
+                  span
+                    | Your Public Profile URL:
+                    br
+                    span#p1 #{currentUrl}
+                //li
+                //  a(href='https://web.whatsapp.com/send?text='+currentUrl+'' data-action="share/whatsapp/share")
+                //    i.fa.fa-whatsapp(aria-hidden='true')
+
+      .ms_content_wrap
+        .content_left
+          .profile_pic
+            img(src=profilePic ? profilePic : '/images/no-image.png' alt=displayName)
+        .content_right
+          h1
+            | #{displayName} is #{communityType} on #{space}
+            span.m_red m
+            span.m_yel oo
+            span.m_red lya
+            |  from #{chapterName}, #{clusterName}
+          ul.ms_menu
+            if(listView && listView.length >0)
+              each list, i in listView
+                li
+                  a.ms_btn_ye(href='#' + list.name onclick='something("' + list.className + '",this)') #{list.name}
+              li
+        .clear
+        .ms_content.mCustomScrollbar(data-mcs-theme='minimal-dark')
+          .pages
+            .pageManagement
+              if(management && management.length > 0)
+                include management
+                +portFolioSlides(management)
+              else
+                .ms_noBranches
+                  img(src='/images/branches_banner.png')
+
+            .pageTechnology
+              if(technologies && technologies.length > 0)
+                include management
+                +portFolioSlides(technologies)
+              else
+                .ms_noBranches
+                  img(src='/images/branches_banner.png')
+
+
+            .pageTeam
+              if(teamManagement && teamManagement.length > 0)
+                include management
+                +portFolioSlides(teamManagement)
+              else
+                .ms_noBranches
+                  img(src='/images/branches_banner.png')
+
+            .pageSuccessStories
+              if(successStories && successStories.length > 0)
+                include management
+                +portFolioSlides(successStories)
+              else
+                .ms_noBranches
+                  img(src='/images/branches_banner.png')
+
+            .pageClients
+              if(clients && clients.length > 0)
+                include management
+                +portFolioSlides(clients)
+              else
+                .ms_noBranches
+                  img(src='/images/branches_banner.png')
+
+            .pageFocusAreas
+              if(areaOfInterest && areaOfInterest.length > 0)
+                include management
+                +portFolioSlides(areaOfInterest)
+              else
+                .ms_noBranches
+                  img(src='/images/branches_banner.png')
+
+            .pageAwardsandRewards
+              if(awardsRecognition && awardsRecognition.length > 0)
+                include management
+                +portFolioSlides(awardsRecognition)
+              else
+                .ms_noBranches
+                  img(src='/images/branches_banner.png')
+
+            .pageIntrapreneur
+              if(intrapreneurRecognition && intrapreneurRecognition.length > 0)
+                include management
+                +portFolioSlides(intrapreneurRecognition)
+              else
+                .ms_noBranches
+                  img(src='/images/branches_banner.png')
+
+            .pageRandD
+              if(researchAndDevelopment && researchAndDevelopment.length > 0)
+                include management
+                +portFolioSlides(researchAndDevelopment)
+              else
+                .ms_noBranches
+                  img(src='/images/branches_banner.png')
+
+            .pageIncubatorSectors
+              if(!isSectorsAndServicesPrivate)
+                if(sectorsAndServices && sectorsAndServices.length > 0 )
+                  p
+                    | !{sectorsAndServices}
+
+                else
+                  .ms_noBranches
+                    img(src='/images/branches_banner.png')
+              else
+                h2 Private Content
+
+            .pageServicesProducts
+              if(!isServicesProductsDescriptionPrivate)
+                if(servicesProducts && servicesProducts.length > 0 )
+                  p
+                    | !{servicesProducts}
+
+                else
+                  .ms_noBranches
+                    img(src='/images/branches_banner.png')
+              else
+                h2 Private Content
+
+            .pageCSR
+              if(!isPolicyDescriptionPrivate)
+                if(policy && policy.length > 0 )
+                  p
+                    | !{policy}
+
+                else
+                  .ms_noBranches
+                    img(src='/images/branches_banner.png')
+              else
+                h2 Private Content
+
+            .pageServices
+              if(!isServicesPrivate)
+                if(servicesDescription && servicesDescription.length > 0 )
+                  p
+                    | !{servicesDescription}
+
+                else
+                  .ms_noBranches
+                    img(src='/images/branches_banner.png')
+              else
+                h2 Private Content
+
+            .pageIPandTM
+              if(!isIntellectualPrivate)
+                if(IPandTM && IPandTM.length > 0 )
+                  p
+                    | !{IPandTM}
+
+                else
+                  .ms_noBranches
+                    img(src='/images/branches_banner.png')
+              else
+                h2 Private Content
+
+
+            .pageProblemsandSolutions
+              if(!isProblemPrivate)
+                if(problemStatement && problemStatement.length > 0 )
+                  p
+                    | Problem: !{problemStatement}
+                  p
+                    | Solution : !{solutionStatement}
+
+                else
+                  .ms_noBranches
+                    img(src='/images/branches_banner.png')
+              else
+                h2 Private Content
+
+            .pageLookingFor
+              if(!lookingForDescriptionPrivate)
+                include looking_for
+                h3 Past winners have included:
+                  .img_list
+                    img(src='/images/list_img_01.png')
+                    img(src='/images/list_img_01.png')
+                    img(src='/images/list_img_01.png')
+                    img(src='/images/list_img_01.png')
+                    img(src='/images/list_img_01.png')
+              else
+                h2 Private Content
+            .pageAboutDiscription
+              if(!aboutDiscriptionPrivate)
+                if(aboutDiscription && aboutDiscription.length > 0 )
+                  p
+                    | !{aboutDiscription}
+
+                else
+                  .ms_noBranches
+                    img(src='/images/branches_banner.png')
+              else
+                h2 Private Content
+            .pageKeywords
+              if(displayKeywords && displayKeywords.length >0)
+                each keyword , i in displayKeywords
+                  span
+                    | #{keyword.trim()}
+
+
+      .footer
+        p
+          strong
+            | To view more details and to collaborate with
+            span.m_red #{space} #{displayName}
+        a.ms_btn_re(href='/login') Login
+        |  or #{space}
+        a.ms_btn_re(href='https://www.moolya.global/register') Register
+        b
+          | #{space} on #{space}
+          span.m_red m
+          span.m_yel oo
+          span.m_red lya
+          script.
+            $(document).ready(function () {
+              $(".share-social").click(function () {
+                  $(".ms_socialNetworks").slideToggle();
+                  $(".mask").toggle();
+                });
+                $(".mask").click(function(){
+                  $(".ms_socialNetworks").slideUp();
+                  $(this).hide();
+                });
+                $(".share-social").click();
+              $(".ms_socialNetworks li").click(function () {
+                $(".ms_socialNetworks li").removeClass("active");
+                $(this).toggleClass("active");
+              })
+
+            })
+          script.
+            $('.pages').children().css('display', 'none');
+            $('.pageAboutDiscription').css('display', 'block');
+            $($('.ms_btn_ye')[0]).addClass('active_menu')
+            $(event).addClass('active_menu')
+            var something = function (linkName, event) {
+              $('.ms_btn_ye').removeClass('active_menu');
+              $(event).addClass('active_menu')
+              $('.pages').children().css('display', 'none')
+              $('.' + linkName).css('display', 'block')
+            }
+
+            var facebookShare = function (defaultShareText,linkName, event) {
+              FB.ui({
+                method: 'share',
+                display: 'popup',
+                href: linkName,
+                quote:defaultShareText
+              }, function (response) {
+                //console.log(response);
+              });
+            }
+          script.
+            (function ($) {
+              /**
+               * jQuery function to prevent default anchor event and take the href * and the title to make a share popup
+               *
+               * @param  {[object]} e           [Mouse event]
+               * @param  {[integer]} intWidth   [Popup width defalut 500]
+               * @param  {[integer]} intHeight  [Popup height defalut 400]
+               * @param  {[boolean]} blnResize  [Is popup resizeabel default true]
+               */
+              $.fn.customerPopup = function (e, intWidth, intHeight, blnResize) {
+                // Prevent default anchor event
+                e.preventDefault();
+                // Set values for window
+                intWidth = intWidth || '600';
+                intHeight = intHeight || '600';
+                strResize = (blnResize ? 'yes' : 'no');
+                // Set title and open popup with focus on it
+                var strTitle = ((typeof this.attr('title') !== 'undefined') ? this.attr('title') : 'Social Share'),
+                  strParam = 'width=' + intWidth + ',height=' + intHeight + ',resizable=' + strResize,
+                  objWindow = window.open(this.attr('href'), strTitle, strParam).focus();
+              }
+              /* ================================================== */
+              $(document).ready(function ($) {
+                $('.customer.share').on("click", function (e) {
+                  $(this).customerPopup(e);
+                });
+              });
+            }(jQuery));
+
+
+
+
+

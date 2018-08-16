@@ -1,0 +1,56 @@
+{
+  "public": {
+    "googleApiKey": "AIzaSyAd7VZpzSCdkOrkgdhCbMm3JYqwGap0Pa4",
+    "conversationsBaseURL":"https://rkc.moolya.global",
+    "isLeadSquaredTrackingEnabled":true,
+    "dateFormat":"D MMM YYYY HH:mm:ss",
+    "dateOnlyFormat":"D MMM YYYY",
+    "createNewUser":{
+      "code"    : 209,
+      "message" : "New User Created"
+    },
+    "countriesFlagBaseUrl":"https://moolyas3.raksan.in/moolya-images/flags/",
+    "minio":{
+      "minioConfig":{
+        "bucketName":"moolya-users",
+        "endPoint":"moolyas3.raksan.in",
+        "port":443,
+        "secure":true
+      }
+    },
+    "phpWebSiteLink": "https://www.moolya.global/register",
+    "instance":"PROD"
+  },
+  "private": {
+    "subChapterName":"moolya",
+    "HierarchyCount": 10,
+    "emailConfig":{
+      "username": "raksanconsulting",
+      "key": "IMRne62ShKE6Q8zU0NJBsQ"
+    },
+    "smsConfig":{
+      "isWhiteListEnabled":true
+    },
+    "minio":{
+      "minioConfig":{
+        "accessKeyId":"rakSan$3buckEtaccEss",
+        "secretAccessKey":"Raksan$36u(ket#s#cret",
+        "region":"us-east-1",
+        "bucketName":"moolya-users",
+        "regDoc":"registrationDocuments",
+        "endPoint":"moolyas3.raksan.in",
+        "port":443,
+        "secure":true
+      }
+    },
+    "graphql_proxy_url":"http://localhost:8090/graphql",
+    "googleApiKey": "AIzaSyAd7VZpzSCdkOrkgdhCbMm3JYqwGap0Pa4",
+    "smtpMailUrl":"smtp://noreply%40moolya.global:Moolya123@smtp.moolya.global:25",
+    "fromEmailAddr":"noreply@moolya.global",
+    "bugReportEmailAddr":"beta@moolya.global",
+    "isEmailDomainCheckEnabled":true,
+    "isAuditEnabled":true,
+    "isProdENV":true,
+    "conversationsBaseURL":"https://rkc.moolya.global"
+  }
+}

@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+.date {
+  display: block;
+  width: 80px;
+  height: 50px;
+  background: #B9C5CC;
+  margin-bottom: 1px;
+  text-align: center;
+  text-shadow: none;
+  /*font-size: 13px;*/
+}
+.calender_switch{display: inline-block;width: 18px;height: 42px;background: url(/images/cal_switch.png);position: fixed;  right: 89px;  top: 43%;z-index: 3;}
+.calender_switch .fa{    color: #fff;  margin: 14px 0px 0px 4px;  font-size: 13px;}
+.calender_switch.cH{right: 2px;}
+#calendar {
+  height: 300px;
+  overflow: auto;
+  width: 89px;
+  position: fixed;
+  right: 0px;
+  top: 62px;
+  border-left: 2px solid #ef4647;
+  background: #fff;
+  z-index: 3;
+}
+#calendar.calHide{width: 0px;}
+
+.date:hover {
+  background-color: #ef4647;
+  cursor: pointer;
+  color: #fff;
+}
+
+.date.selected {
+  background-color: #ef4647;
+  color: #fff;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

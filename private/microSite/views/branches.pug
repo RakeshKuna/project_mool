@@ -1,0 +1,14 @@
+if(branches && branches.length > 0)
+  .ms_branches
+    each branch, i in branches
+      .branch_block
+        img(src=branch.branches_logo?branch.branches_logo:'/images/branch_img.png')
+        h3 #{branch.name}
+        p
+          | #{branch.addr1}, #{branch.addr2}, #{branch.area} ,#{branch.city}, #{branch.state}, #{branch.country}
+else
+  .ms_noBranches
+    img(src='/images/branches_banner.png')
+
+.clear
+
